@@ -25,6 +25,17 @@ int main() {
         contador_rainha++;
     } while (contador_rainha <= 8);
 
-    return 0;
+
+     printf("\nMovimento do Cavalo:\n");
+    for (int i = 0; i < 1; i++) {
+        int passos_para_baixo = 0;
+        while (passos_para_baixo < 2) {
+            printf("Baixo\n");
+            passos_para_baixo++;
+        }
+        printf("Esquerda\n");
+    }
+
+     return 0;
 }
 
