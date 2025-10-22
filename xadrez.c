@@ -18,6 +18,13 @@ int main() {
         contador_bispo++;
     }
 
+     printf("\nMovimento da Rainha:\n");
+    int contador_rainha = 1;
+    do {
+        printf("Esquerda\n");
+        contador_rainha++;
+    } while (contador_rainha <= 8);
+
     return 0;
 }
 
