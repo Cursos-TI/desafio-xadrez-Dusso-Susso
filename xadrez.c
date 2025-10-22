@@ -5,37 +5,56 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 
+void moverTorre(int casas) {
+    if (casas == 0) return;
+    printf("Direita\n");
+    moverTorre(casas - 1);
+}
+
+void moverBispo(int casas) {
+    if (casas == 0) return;
+    for (int i = 0; i < 1; i++) {
+        for (int j = 0; j < 1; j++) {
+            printf("Cima Direita\n");
+        }
+    }
+    moverBispo(casas - 1);
+}
+
+void moverRainha(int casas) {
+    if (casas == 0) return;
+    printf("Esquerda\n");
+    moverRainha(casas - 1);
+}
+
+void moverCavalo() {
+    int passosCima = 0;
+    int passosDireita = 0;
+
+    for (int i = 0; i < 2; i++) {
+        printf("Cima\n");
+        passosCima++;
+    }
+
+    while (passosDireita < 1) {
+        printf("Direita\n");
+        passosDireita++;
+    }
+}
+
 int main() {
     printf("Movimento da Torre:\n");
-    for (int i = 1; i <= 5; i++) {
-        printf("Direita\n");
-    }
+    moverTorre(5);
 
     printf("\nMovimento do Bispo:\n");
-    int contador_bispo = 1;
-    while (contador_bispo <= 5) {
-        printf("Cima Direita\n");
-        contador_bispo++;
-    }
+    moverBispo(5);
 
-     printf("\nMovimento da Rainha:\n");
-    int contador_rainha = 1;
-    do {
-        printf("Esquerda\n");
-        contador_rainha++;
-    } while (contador_rainha <= 8);
+    printf("\nMovimento da Rainha:\n");
+    moverRainha(8);
 
+    printf("\nMovimento do Cavalo:\n");
+    moverCavalo();
 
-     printf("\nMovimento do Cavalo:\n");
-    for (int i = 0; i < 1; i++) {
-        int passos_para_baixo = 0;
-        while (passos_para_baixo < 2) {
-            printf("Baixo\n");
-            passos_para_baixo++;
-        }
-        printf("Esquerda\n");
-    }
-
-     return 0;
+    return 0;
 }
 
